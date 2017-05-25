@@ -1,0 +1,12 @@
+.shop {
+	width: 270px;
+	display: inline-block;
+	margin: 5px;
+	padding: 5px;
+	background: wheat;
+}
+
+#map {
+    height: 400px;
+    width: 100%;     
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2017-05-23T10:41:14Z" product-name="scorpshop">
+		<header/>
+		<body>
+			<trans-unit id="tx_scorpshop_domain_model_shop">
+				<source>Shop</source>
+			</trans-unit>
+			<trans-unit id="tx_scorpshop_domain_model_shop.description">
+				<source></source>
+			</trans-unit>
+			<trans-unit id="name.description">
+				<source>name</source>
+			</trans-unit>
+			<trans-unit id="adress.description">
+				<source>adress</source>
+			</trans-unit>
+			<trans-unit id="phone.description">
+				<source>phone</source>
+			</trans-unit>
+			<trans-unit id="url.description">
+				<source>url</source>
+			</trans-unit>
+			<trans-unit id="lat.description">
+				<source>lat</source>
+			</trans-unit>
+			<trans-unit id="lng.description">
+				<source>lng</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

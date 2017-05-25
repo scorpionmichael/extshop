@@ -1,0 +1,51 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+This Template is responsible for creating a table of domain objects.
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        List.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="main">
+<h1>Shops</h1>
+
+<div id="map"></div>
+
+<f:for each="{shops}" as="shop">
+	<div class="shop">
+		<p>{shop.name}</p>
+		<p>{shop.adress}</p>
+		<p>{shop.phone}</p>
+		<p>{shop.url}</p>
+	</div>
+</f:for>
+
+<script>
+	function initMap() {
+		var points = JSON.parse('<f:format.raw>{points}</f:format.raw>');
+
+		var map = new google.maps.Map(document.getElementById('map'), {
+			zoom: 16,
+			center: points[0]
+		});
+
+		for (var i = 0; i < points.length; i++) {
+			var marker = new google.maps.Marker({
+				position: points[i],
+				map: map
+			});
+		}
+	}
+</script>
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCdaE87W9QLJMeJf4251-uGN8jH5IGjlSU&callback=initMap">
+</script>
+
+</f:section>
+</html>
