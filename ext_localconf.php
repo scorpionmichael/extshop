@@ -37,6 +37,8 @@ call_user_func(
 		   }'
 		);
 
+		$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_tcemain.php']['processDatamapClass'][$extKey] = \ScorpShop\Scorpshop\Hooks\DataHandler::class;
+
 		$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['scheduler']['tasks'][\Scorpshop\Scorpshop\Task\LocationTask::class] = array(
 	        'extension' => $extKey,
 	        'title' => 'LocationTask',
