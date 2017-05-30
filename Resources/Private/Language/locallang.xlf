@@ -30,6 +30,9 @@
 			<trans-unit id="tx_scorpshop_domain_model_shop.lng">
 				<source>Lng</source>
 			</trans-unit>
+			<trans-unit id="lng.group_id">
+				<source>group_id</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

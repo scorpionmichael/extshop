@@ -27,6 +27,9 @@
 			<trans-unit id="lng.description">
 				<source>lng</source>
 			</trans-unit>
+			<trans-unit id="lng.group_id">
+				<source>group_id</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

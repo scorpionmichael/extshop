@@ -32,15 +32,28 @@ class ShopController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
      */
     public function listAction()
     {
-        $shops = $this->shopRepository->findAll();
         $points = [];
+        $shops = [];
+
+        if ($GLOBALS['TSFE']->fe_user->groupData)
+        {
+            foreach ($GLOBALS['TSFE']->fe_user->groupData['uid'] as $groupId) 
+            {
+                $shopsGroup = $this->shopRepository->findByGroupId($groupId);
+
+                foreach ($shopsGroup as $shop) 
+                {
+                    array_push($shops, $shop);
+                }
+            }
+        }
 
         foreach ($shops as $shop) 
         {
             array_push($points, ['lat' => floatval($shop->getLat()), 'lng' => floatval($shop->getLng())]);
         }
 
-        //\TYPO3\CMS\Core\Utility\DebugUtility::debug($shops);
+        //\TYPO3\CMS\Core\Utility\DebugUtility::debug($points);
         $this->view->assign('shops', $shops);
         $this->view->assign('points', json_encode($points));
     }

@@ -10,6 +10,7 @@ CREATE TABLE tx_scorpshop_domain_model_shop (
 	adress varchar(255) DEFAULT '' NOT NULL,
 	phone varchar(255) DEFAULT '' NOT NULL,
 	url varchar(255) DEFAULT '' NOT NULL,
+	group_id varchar(255) DEFAULT '' NOT NULL,
 	lat varchar(255) DEFAULT '' NOT NULL,
 	lng varchar(255) DEFAULT '' NOT NULL,
 

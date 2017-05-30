@@ -28,7 +28,7 @@ Otherwise your changes will be overwritten the next time you save the extension 
 
 <script>
 	function initMap() {
-		var points = JSON.parse('<f:format.raw>{points}</f:format.raw>');
+		var points = JSON.parse('<f:format.raw>{points}</f:format.raw>');console.log(points);
 
 		var map = new google.maps.Map(document.getElementById('map'), {
 			zoom: 16,

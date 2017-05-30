@@ -20,10 +20,10 @@ return [
         'iconfile' => 'EXT:scorpshop/Resources/Public/Icons/tx_scorpshop_domain_model_shop.gif'
     ],
     'interface' => [
-		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, adress, phone, url, lat, lng',
+		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, adress, phone, url, lat, lng, group_id',
     ],
     'types' => [
-		'1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, adress, phone, url, lat, lng, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
+		'1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, adress, phone, url, lat, lng, group_id, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
     ],
     'columns' => [
 		'sys_language_uid' => [
@@ -161,5 +161,18 @@ return [
 			    'eval' => 'trim'
 			],
 	    ],
+        'group_id' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:scorpshop/Resources/Private/Language/locallang_db.xlf:tx_scorpshop_domain_model_shop.group_id',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectMultipleSideBySide',
+                'items' => [
+                    ['', 0]
+                ],
+                'foreign_table' => 'fe_groups',
+                'showIconTable' => false
+            ]
+        ]
     ],
 ];

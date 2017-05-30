@@ -60,6 +60,13 @@ class Shop extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $lng = '';
 
     /**
+     * group_id_test
+     *
+     * @var string
+     */
+    protected $groupId = '';
+
+    /**
      * Returns the name
      *
      * @return string $name
@@ -183,5 +190,26 @@ class Shop extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setLng($lng)
     {
         $this->lng = $lng;
+    }
+
+    /**
+     * Returns the group_id_test
+     *
+     * @return string $group_id_test
+     */
+    public function getGroupId()
+    {
+        return $this->groupId;
+    }
+
+    /**
+     * Sets the lng
+     *
+     * @param string $groupIdTest
+     * @return void
+     */
+    public function setGroupId($groupId)
+    {
+        $this->groupId = $groupId;
     }
 }
